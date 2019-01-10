@@ -3,5 +3,7 @@ from tpsapp import views
 
 urlpatterns=[
     url(r'^$',views.homepage,name='homepage'),
-    url(r'^sign/$',views.sign,name='sign')
+    url(r'^login/$',views.login,name='login'),
+    url(r'^register/$',views.register,name='register'),
+    url(r'^logout/$',views.logout,name='logout'),
 ]
