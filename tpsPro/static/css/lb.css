@@ -1,0 +1,28 @@
+body {
+        background: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+
+    }
+#banner{width: 1424px;height: 404px;overflow: hidden;position:relative;top: -7px;}
+#list1{position: absolute;}
+#list2{position: absolute;left: 45%;bottom: 5%;width: 160px;height: 18px;background: aquamarine;border-radius: 10px;opacity: 0.6;}
+#list2 li{float: left;width: 10px;height: 10px;border-radius: 50%;background: white;margin-left: 15px;cursor: pointer;margin-top: 3px;}
+#list2 li.active{background: red;}
+#bannerLeft,#bannerRight{position: absolute;top: 45%;width: 26px;height: 66px;background: black;opacity:0.5;line-height: 66px;text-align: center;color: white;font-size: 22px;cursor: pointer;}
+#bannerLeft{left: 15%;}
+#bannerRight{right: 15%;}

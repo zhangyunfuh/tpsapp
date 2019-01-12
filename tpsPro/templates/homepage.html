@@ -7,11 +7,16 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'css/public.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'css/creat.css' %}">
+        <link rel="stylesheet" href="{% static 'css/swiper-3.4.2.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/lb.css' %}">
 		<script src="{% static 'js/jquery-3.1.0.min.js' %}" ></script>
 		<script type="text/javascript" src="{% static 'js/public.js' %}" ></script>
 		<script type="text/javascript" src="{% static 'js/new.js' %}" ></script>
 		<script type="text/javascript" src="{% static 'js/hot.js' %}" ></script>
 		<script type="text/javascript" src="{% static 'js/commodity.js' %}" ></script>
+        <script src="{% static 'js/swiper-3.4.2.min.js' %}"></script>
+        <script src="{% static 'js/lb.js' %}"></script>
+
 	</head>
 	<body>
 		<div id="header">
@@ -367,8 +372,8 @@
 			</div>
 		</div>
 		<div id="banner">
-			<ul id="list1">
-				
+            <ul id="list1">
+
 			</ul>
 			<ul id="list2">
 				<li class="active"></li>
@@ -378,6 +383,17 @@
 				<li></li>
 				<li></li>
 			</ul>
+
+           <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="{% static 'img/1.jpg' %}" alt=""></div>
+      <div class="swiper-slide"><img src="{% static 'img/2.jpg' %}" alt=""></div>
+      <div class="swiper-slide"><img src="{% static 'img/3.jpg' %}" alt=""></div>
+      <div class="swiper-slide"><img src="{% static 'img/4.jpg' %}" alt=""></div>
+
+    </div>
+
+  </div>
 			<div id="bannerLeft">
 				&lt;
 			</div>

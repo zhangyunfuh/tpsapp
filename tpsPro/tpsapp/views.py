@@ -23,9 +23,9 @@ def generate_token():
     md5.update(token.encode('utf-8'))
 
     return md5.hexdigest()
-def generate_password(password):
+def generate_password(passwd):
     sha = hashlib.sha256()
-    sha.update(password.encode('utf-8'))
+    sha.update(passwd.encode('utf-8'))
     return sha.hexdigest()
 
 def register(request):
@@ -34,8 +34,8 @@ def register(request):
     elif request.method=='POST':
         user=User()
         user.name=request.POST.get('name')
+        print(request.POST)
         user.password=generate_password(request.POST.get('password'))
-
         user.token=generate_token()
         user.save()
         response=redirect('tpsapp:homepage')
@@ -46,20 +46,18 @@ def login(request):
         return render(request,'login.html')
     elif request.method=='POST':
         name=request.POST.get('name')
-        password=request.POST.get('password')
+        password=generate_password(request.POST.get('password'))
         #print(request.POST)
-        users=User.objects.filter(name=name)
+        users=User.objects.filter(name=name).filter(password=password)
         if users.count():
-
             user=users.first()
-            user.token=generate_token()
-            user.save()
+            response = redirect('tpsapp:homepage')
             request.session['token']=user.token
             request.session.set_expiry(30)
-            response = redirect('tpsapp:homepage')
             return response
         else:
-            return render(request,'login.html',{'err':'用户名或密码错误'})
+            err='用户名或密码错误'
+            return render(request,'login.html',{'err':err})
 
 def logout(request):
     response=redirect('tpsapp:homepage')
