@@ -52,12 +52,18 @@
                             {% endif %}
 
 						    <span><span><img src="{% static 'img/star.png' %}" class="star1"/><img src="{% static 'img/red.png' %}" class="star2"/></span>我的关注（0）</span>
-						    <div id="headerOne_c_r_r_1">个人中心<span><img src="{% static 'img/index.png' %}"></span>
+						    <div id="headerOne_c_r_r_1">
+                                <div id="headimg">
+                                    <img src="http://im6.leaderhero.com/emotion/6684/41161076/8916ae014c.jpg">
+                                    <p style="color: #0b3c80;">个人中心</p>
+                                </div>
+
+                                <span><img src="{% static 'img/index.png' %}"></span>
 						    	<ul>
 						    		<li><a href="#">我的订单</a></li>
 						    	</ul>
 						    </div>
-						</div>						
+						</div>
 					</div>
 				</div>
 			</div>
@@ -65,11 +71,11 @@
 				<div id="down">
 					<img src="{% static 'img/down3.png' %}" style="width: 70px;height: 50px;"/>
 				</div>
-				
+
 				<div id="up">
 					<img src="{% static 'img/up3.png' %}"style="width: 70px;height: 50px;"/>
 				</div>
-				
+
 				<div id="headerTwo_c">
 					<img src="{% static 'img/logo.png' %}" id="homepage"/>
 				    <input type="text"id="search_k" placeholder="请输入关键词搜索商品" />
@@ -79,24 +85,24 @@
 				    	<br />
 				    	<div id="shoppingCart_c">
 				    		<img src="{% static 'img/gwc.png' %}"/><span>购物车</span><img src="{% static 'img/indexred.png' %}"/>
-				    	</div>				    	
+				    	</div>
 				    </div>
 				</div>
 			</div>
-			
+
 			<div id="headerNav">
 				<div id="headerNav_n">
 					全部商品分类
 					<img src="{% static 'img/index_rr.png' %}"/>
 					<ul class="headerNav_n">
-						<li><span>服饰箱包</span>							
+						<li><span>服饰箱包</span>
 							<div id="headerNav_n_one">
 								<b>箱包&gt;<br /></b>
 								<a href="#">时尚女包</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 							</div>
 						</li>
-						
+
 						<li><span>母婴用品</span>
 							<div id="headerNav_n_two">
 								<b>婴幼儿奶粉&gt;<br /></b>
@@ -136,9 +142,9 @@
 								<b>婴幼儿辅食&gt;<br /></b>
 								<a href="#">儿童/宝宝面</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
-							</div>				
+							</div>
 						</li>
-						
+
 						<li><span>美妆个护</span>
 								<div id="headerNav_n_three">
 								<b>洗发护发&gt;<br /></b>
@@ -185,9 +191,9 @@
 								<b>身体护理&gt;<br /></b>
 								<a href="#">沐浴润肤</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
-							</div>	
+							</div>
 						</li>
-						
+
 						<li><span>汽车用品</span>
 						    <div id="headerNav_n_four">
 								<b>车载电器&gt;<br /></b>
@@ -205,21 +211,21 @@
 								<hr style="width: 600px;background: #EEEEEE;"/>
 							</div>
 						</li>
-						
+
 						<li><span>营养保健</span>
 						    <div id="headerNav_n_six">
 								<b>家庭保健&gt;<br /></b>
 								<a href="#">血压计</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>保健食品&gt;<br /></b>
-								<a href="#">滋补养生</a>		
-								<a href="#">肠胃养护</a>	
-								<a href="#">玛咖</a>		
-								<a href="#">孝素</a>		
+								<a href="#">滋补养生</a>
+								<a href="#">肠胃养护</a>
+								<a href="#">玛咖</a>
+								<a href="#">孝素</a>
 								<a href="#">调节免疫</a>
-								<a href="#">Organika</a>	
-								<a href="#">美体瘦身</a>	
-								<a href="#">美容养颜</a>	
+								<a href="#">Organika</a>
+								<a href="#">美体瘦身</a>
+								<a href="#">美容养颜</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>健康用品&gt;<br /></b>
 								<a href="#">睡眠辅助</a>
@@ -244,10 +250,10 @@
 								<a href="#">饮食</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>粮油调味&gt;<br /></b>
-								<a href="#">面</a>		
-								<a href="#">厨房调味</a>	
-								<a href="#">蛋</a>		
-								<a href="#">大米</a>		
+								<a href="#">面</a>
+								<a href="#">厨房调味</a>
+								<a href="#">蛋</a>
+								<a href="#">大米</a>
 								<a href="#">杂粮</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>中外名酒&gt;<br /></b>
@@ -282,16 +288,16 @@
 						<li><span>家居日用</span>
 						   <div id="headerNav_n_eight">
 								<b>厨具&gt;<br /></b>
-								<a href="#">刀具套餐</a>								
+								<a href="#">刀具套餐</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>清洁用品&gt;<br /></b>
-								<a href="#">洗洁精</a>		
-								<a href="#">衣物洗护</a>	
-								<a href="#">净化除味</a>										
+								<a href="#">洗洁精</a>
+								<a href="#">衣物洗护</a>
+								<a href="#">净化除味</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>精美餐具&gt;<br /></b>
 								<a href="#">碗具</a>
-								<a href="#">功夫茶具</a>								
+								<a href="#">功夫茶具</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>烹饪餐具&gt;<br /></b>
 								<a href="#">炒锅</a>
@@ -302,10 +308,10 @@
 								<a href="#">套锅</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>床上用品&gt;<br /></b>
-								<a href="#">被子枕头</a>		
+								<a href="#">被子枕头</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>五金/工具&gt;<br /></b>
-								<a href="#">卫浴/龙头</a>								
+								<a href="#">卫浴/龙头</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>生活用品&gt;<br /></b>
 								<a href="#">毛巾浴巾</a>
@@ -315,47 +321,47 @@
 								<b>家用电器&gt;<br /></b>
 								<a href="#">厨房小电</a>
 								<a href="#">个护健康</a>
-								<a href="#">净水设备</a>								
+								<a href="#">净水设备</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 							</div>
 						</li>
 						<li><span>钟表首饰</span>
 						   <div id="headerNav_n_nine">
-								<b>手表&gt;<br /></b>													
+								<b>手表&gt;<br /></b>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>耳环类&gt;<br /></b>
-								<a href="#">银质</a>		
-								<a href="#">珍珠</a>																		
+								<a href="#">银质</a>
+								<a href="#">珍珠</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>项链类&gt;<br /></b>
 								<a href="#">珍珠</a>
-								<a href="#">银</a>								
+								<a href="#">银</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
-								<b>眼镜&gt;<br /></b>								
+								<b>眼镜&gt;<br /></b>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>手镯/手链类&gt;<br /></b>
-								<a href="#">银饰</a>		
+								<a href="#">银饰</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>戒指&gt;<br /></b>
-								<a href="#">银饰</a>								
-								<hr style="width: 600px;background: #EEEEEE;"/>						
+								<a href="#">银饰</a>
+								<hr style="width: 600px;background: #EEEEEE;"/>
 							</div>
 						</li>
 						<li><span>数码电子</span>
 						    <div id="headerNav_n_ten">
 								<b>智能设备&gt;<br /></b>
-								<a href="#">智能家居</a>	
+								<a href="#">智能家居</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
-								<b>耳机&gt;<br /></b>																								
+								<b>耳机&gt;<br /></b>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>电脑&gt;<br /></b>
-								<a href="#">Dell</a>																
+								<a href="#">Dell</a>
 								<hr style="width: 600px;background: #EEEEEE;"/>
 								<b>手机配件&gt;<br /></b>
-								<a href="#">数据线</a>	
-								<a href="#">车载配件</a>	
-								<a href="#">手机保护套</a>	
-								<a href="#">充电器</a>													
+								<a href="#">数据线</a>
+								<a href="#">车载配件</a>
+								<a href="#">手机保护套</a>
+								<a href="#">充电器</a>
 							</div>
 						</li>
 					</ul>
@@ -372,9 +378,16 @@
 			</div>
 		</div>
 		<div id="banner">
-            <ul id="list1">
+           <div class="swiper-container">
+               <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src='http://127.0.0.1:8000/static/img/1.jpg'  alt=""></div>
+                      <div class="swiper-slide"><img src='http://127.0.0.1:8000/static/img/2.jpg'  alt=""></div>
+                      <div class="swiper-slide"><img src='http://127.0.0.1:8000/static/img/3.jpg'  alt=""></div>
+                      <div class="swiper-slide"><img src='http://127.0.0.1:8000/static/img/4.jpg'  alt=""></div>
 
-			</ul>
+               </div>
+               <div class="swiper-pagination"></div>
+           </div>
 			<ul id="list2">
 				<li class="active"></li>
 				<li></li>
@@ -384,16 +397,6 @@
 				<li></li>
 			</ul>
 
-           <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="{% static 'img/1.jpg' %}" alt=""></div>
-      <div class="swiper-slide"><img src="{% static 'img/2.jpg' %}" alt=""></div>
-      <div class="swiper-slide"><img src="{% static 'img/3.jpg' %}" alt=""></div>
-      <div class="swiper-slide"><img src="{% static 'img/4.jpg' %}" alt=""></div>
-
-    </div>
-
-  </div>
 			<div id="bannerLeft">
 				&lt;
 			</div>
@@ -401,8 +404,8 @@
 				&gt;
 			</div>
 		</div>
-		
-		
+
+
 		<div id="guarantee">
 			<div id="guaranteeOne" class="guarantee">
 				<img src="{% static 'img/zp.png' %}"/>
@@ -433,8 +436,8 @@
 				</div>
 			</div>
 		</div>
-		
-		
+
+
 		<div id="new">
 			<div id="newTop">
 				<span>新品上架</span>
@@ -447,36 +450,16 @@
 			    </ul>
 			</div>
 			<div id="box">
-				<div id="newBox1" style="width: 1200px;float: left;"></div>
-				<div id="newBox2" style="width: 1200px;float: left;"></div>
-				<div id="newBox3" style="width: 1200px;float: left;"></div>
-				<div id="newBox4" style="width: 1200px;float: left;"></div>
-				<div id="newBox5" style="width: 1200px;float: left;"></div>
-				<div id="newBox6" style="width: 1200px;float: left;"></div>
+				<div id="newBox1" style="width: 1200px;float: left;"><img src="{% static 'img/1.jpg' %}"></div>
+				<div id="newBox2" style="width: 1200px;float: left;"><img src="{% static 'img/2.jpg' %}"></div>
+				<div id="newBox3" style="width: 1200px;float: left;"><img src="{% static 'img/3.jpg' %}"></div>
+				<div id="newBox4" style="width: 1200px;float: left;"><img src="{% static 'img/4.jpg' %}"></div>
+				<div id="newBox5" style="width: 1200px;float: left;"><img src="{% static 'img/5.jpg' %}"></div>
 			</div>
 		</div>
-		<div id="hot">
-			<div id="hotTop">
-				<span>热卖推荐</span>
-				<ul id="list4">
-					<li class="active"></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-			    </ul>
-			</div>
-			<div id="box1">
-				<div id="hotBox1" style="width: 1200px;float: left;"></div>
-				<div id="hotBox2" style="width: 1200px;float: left;"></div>
-				<div id="hotBox3" style="width: 1200px;float: left;"></div>
-				<div id="hotBox4" style="width: 1200px;float: left;"></div>
-				<div id="hotBox5" style="width: 1200px;float: left;"></div>
-				<div id="hotBox6" style="width: 1200px;float: left;"></div>
-			</div>
-		</div>
+
         <div id="mainContent">
-<!-- 母婴-->   <!-- 母婴-->        	
+<!-- 母婴-->   <!-- 母婴-->
 	        <div id="baby" class="1">
 				<div id="babyTop">
 					<span style="float: left;">母婴用品</span>
@@ -498,7 +481,10 @@
 				</div>
 				<div id="baby_m">
 					<ul id="list5">
-						
+                        <li><a href="{% url 'tpsapp:detailed' %}">
+                            <img src="{% static 'img/56e29bfb9d4c0_main.jpg' %}">
+                        </a></li>
+
 					</ul>
 					<ul id="list55">
 						<li class="active"></li>
@@ -514,10 +500,10 @@
 					</div>
 				</div>
 				<div id="baby_r">
-					
+
 				</div>
 			</div>
-<!--美妆-->		<!--美妆-->	
+<!--美妆-->		<!--美妆-->
 			<div id="beauty" class="1">
 				<div id="beautyTop">
 					<span style="float: left;">美妆个护</span>
@@ -539,7 +525,7 @@
 				</div>
 				<div id="beauty_m">
 					<ul id="list6">
-						
+
 					</ul>
 					<ul id="list66">
 						<li class="active"></li>
@@ -555,10 +541,10 @@
 					</div>
 				</div>
 				<div id="beauty_r">
-					
+
 				</div>
 			</div>
-<!--食品-->	<!--食品-->	<!--食品-->		
+<!--食品-->	<!--食品-->	<!--食品-->
 			<div id="food" class="1">
 				<div id="foodTop">
 					<span style="float: left;">食品、酒水</span>
@@ -580,7 +566,7 @@
 				</div>
 				<div id="food_m">
 					<ul id="list7">
-						
+
 					</ul>
 					<ul id="list77">
 						<li class="active"></li>
@@ -596,10 +582,10 @@
 					</div>
 				</div>
 				<div id="food_r">
-					
+
 				</div>
 			</div>
-<!--钟表-->		<!--钟表-->			
+<!--钟表-->		<!--钟表-->
 			<div id="clock" class="1">
 				<div id="clockTop">
 					<span style="float: left;">钟表首饰</span>
@@ -621,7 +607,7 @@
 				</div>
 				<div id="clock_m">
 					<ul id="list8">
-						
+
 					</ul>
 					<ul id="list88">
 						<li class="active"></li>
@@ -637,10 +623,10 @@
 					</div>
 				</div>
 				<div id="clock_r">
-					
+
 				</div>
 			</div>
-<!--健康-->	<!--健康-->	<!--健康-->	
+<!--健康-->	<!--健康-->	<!--健康-->
 			<div id="health" class="1">
 				<div id="healthTop">
 					<span style="float: left;">营养保健</span>
@@ -662,7 +648,7 @@
 				</div>
 				<div id="health_m">
 					<ul id="list9">
-						
+
 					</ul>
 					<ul id="list99">
 						<li class="active"></li>
@@ -678,10 +664,10 @@
 					</div>
 				</div>
 				<div id="health_r">
-					
+
 				</div>
 			</div>
-<!--家居-->		<!--家居-->		
+<!--家居-->		<!--家居-->
 			<div id="material" class="1">
 				<div id="materialTop">
 					<span style="float: left;">家居日用</span>
@@ -703,7 +689,7 @@
 				</div>
 				<div id="material_m">
 					<ul id="list11">
-						
+
 					</ul>
 					<ul id="list111">
 						<li class="active"></li>
@@ -719,10 +705,10 @@
 					</div>
 				</div>
 				<div id="material_r">
-					
+
 				</div>
 			</div>
-<!--数码-->	<!--数码--><!--数码-->	<!--数码-->			
+<!--数码-->	<!--数码--><!--数码-->	<!--数码-->
 			<div id="digital" class="1">
 				<div id="digitalTop">
 					<span style="float: left;">数码电子</span>
@@ -743,7 +729,7 @@
 					</div>
 				</div>
 				<div id="digital_m">
-					<ul id="list12">						
+					<ul id="list12">
 					</ul>
 					<ul id="list1212">
 						<li class="active"></li>
@@ -759,7 +745,7 @@
 					</div>
 				</div>
 				<div id="digital_r">
-					
+
 				</div>
 			</div>
         </div>
@@ -773,13 +759,13 @@
         		<li>保健</li>
         		<li>家居</li>
         		<li>电器</li>
-        		
+
         	</ul>
         	<div id="top">
         			TOP
         		</div>
         </div>
-<!--尾部  -->    <!--尾部  --> <!--尾部  --> <!--尾部  --> <!--尾部  -->   
+<!--尾部  -->    <!--尾部  --> <!--尾部  --> <!--尾部  --> <!--尾部  -->
         <div id="footer">
         	<div id="footer_c">
         		<div id="footer_c_l">

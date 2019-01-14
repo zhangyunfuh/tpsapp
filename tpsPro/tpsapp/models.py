@@ -7,3 +7,9 @@ class User(models.Model):
     auth=models.CharField(max_length=10)
 
 
+class wheel(models.Model):
+    img=models.CharField(max_length=200)
+    trackid=models.CharField(max_length=30)
+    class Meta:
+        db_table='wheel'
+

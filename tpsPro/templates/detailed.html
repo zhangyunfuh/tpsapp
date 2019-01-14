@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/public.css"/>
-		<link rel="stylesheet" type="text/css" href="css/detailed.css"/>
-		<script src="js/jquery-1.12.0.js"></script>
-		<script type="text/javascript" src="js/public.js" ></script>
-		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
-		<script type="text/javascript" src="js/detailed.js" ></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/public.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/detailed.css' %}"/>
+		<script src="{% static 'js/jquery-1.12.0.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/public.js' %}" ></script>
+		<script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}" ></script>
+		<script type="text/javascript" src="{% static 'js/detailed.js' %}" ></script>
 	</head>
 	<body>
 		<div id="header">
@@ -16,17 +17,17 @@
 				<div id="headerOne_c">
 					<div id="headerOne_c_l">
 						<div id="headerOne_c_l_l">
-							<span><img src="img/cn.jpg" alt="" style="width: 16px;height: 10px;"/></span>中国<span><img src="img/index.png"alt=""/></span>
+							<span><img src="{% static 'img/cn.jpg' %}" alt="" style="width: 16px;height: 10px;"/></span>中国<span><img src="{% static 'img/index.png' %}"alt=""/></span>
 							<ul>
-								<li><img src="img/us.jpg"/><span>美国</span></li>
-								<li><img src="img/ko.jpg"/><span>韩国</span></li>
-								<li><img src="img/hk.jpg"/><span>香港</span></li>
-								<li><img src="img/cn.jpg"/><span>中国</span></li>
+								<li><img src="{% static 'img/us.jpg' %}"/><span>美国</span></li>
+								<li><img src="{% static 'img/ko.jpg' %}"/><span>韩国</span></li>
+								<li><img src="{% static 'img/hk.jpg' %}"/><span>香港</span></li>
+								<li><img src="{% static 'img/cn.jpg' %}"/><span>中国</span></li>
 								<li style="font-size: 12px;margin-left: 26px;">Other</li>
 							</ul>
 						</div>
 						<div id="headerOne_c_l_r">
-							<span>￥人民币<span><img src="img/index.png"alt=""/></span></span>
+							<span>￥人民币<span><img src="{% static 'img/index.png' %}"alt=""/></span></span>
 							<ul>
 								<li><a href="#">$美元</a></li>
 								<li><a href="#">￥人民币</a></li>
@@ -38,8 +39,8 @@
 					<div id="headerOne_c_r">
 						<div id="headerOne_c_r_r">
 							<span><a href="signIn_Register.html" target="_blank">登录</a><a href="signIn_Register.html" target="_blank">注册</a></span>
-						    <span><span><img src="img/star.png" class="star1"/><img src="img/red.png" class="star2"/></span>我的关注（0）</span>
-						    <div id="headerOne_c_r_r_1">个人中心<span><img src="img/index.png"></span>
+						    <span><span><img src="{% static 'img/star.png' %}" class="star1"/><img src="{% static 'img/red.png' %}" class="star2"/></span>我的关注（0）</span>
+						    <div id="headerOne_c_r_r_1">个人中心<span><img src="{% static 'img/index.png' %}"></span>
 						    	<ul>
 						    		<li><a href="#">我的订单</a></li>
 						    	</ul>
@@ -50,14 +51,14 @@
 			</div>
 			<div id="headerTwo">
 				<div id="headerTwo_c">
-					<img src="img/logo.png"   id="homepage"/>
+					<img src="{% static 'img/logo.png' %}"   id="homepage"/>
 				    <input type="text"id="search_k" placeholder="请输入关键词搜索商品" />
 				    <input type="button" id="search_b"/>
 				    <div id="shoppingCart">
 				    	<span style="position: relative;left: 15px;"></span>
 				    	<br />
 				    	<div id="shoppingCart_c">
-				    		<img src="img/gwc.png"/><span>购物车</span><img src="img/indexred.png"/>
+				    		<img src="{% static 'img/gwc.png' %}"/><span>购物车</span><img src="{% static 'img/indexred.png' %}"/>
 				    	</div>				    	
 				    </div>
 				</div>
@@ -66,7 +67,7 @@
 			<div id="headerNav">
 				<div id="headerNav_n">
 					全部商品分类
-					<img src="img/index_rr.png"/>
+					<img src="{% static 'img/index_rr.png' %}"/>
 					<ul class="headerNav_n">
 						<li><span>服饰箱包</span>
 							<div id="headerNav_n_one">
@@ -353,7 +354,7 @@
 <!--商品详情部分-->	<!--商品详情部分-->	<!--商品详情部分-->	<!--商品详情部分-->	<!--商品详情部分-->	
 		<div id="box">
 			<div id="boxTop">
-				<img src="img/s.jpg"/>
+				<img src="{% static 'img/s.jpg' %}"/>
 				<a href="#">首页</a>
 				<span>&gt;</span>
 				<a href="#">家居日用</a>
@@ -367,14 +368,14 @@
 		
 			<div id="boxContent">
 				<div id="smallPicBox"><!--商品主图-->	
-					<img src="img/8383f07842a550b653dd763712c8f784.jpg" id="smallPic"/>
-					<img src="img/33.jpg" id="smallPic2"/>
+					<img src="{% static 'img/8383f07842a550b653dd763712c8f784.jpg' %}" id="smallPic"/>
+					<img src="{% static 'img/33.jpg' %}" id="smallPic2"/>
 					<div id="moveDiv">				
 					</div>
 				</div>	
 				<div id="bigPicBox"><!--商品大图-->
-					<img src="img/8383f07842a550b653dd763712c8f784.jpg" id="bigPic"/>
-					<img src="img/33.jpg" id="bigPic2"/>
+					<img src="{% static 'img/8383f07842a550b653dd763712c8f784.jpg' %}" id="bigPic"/>
+					<img src="{% static 'img/33.jpg' %}" id="bigPic2"/>
 				</div>
 <!--商品说明-->				
 				<div id="boxContent_r">
@@ -386,15 +387,15 @@
 				    <span style="font-size: 12px;color: #888888;">规格:</span><br />
 				    <div class="guige">
 				    	<ul id="guige">
-				    		<li class="active2">贝壳包700ml+700ml</li>
-				    		<li>迷你包700ml+700ml</li>
-				    		<li>贝壳包700ml+700ml</li>
-				    		<li>贝壳包700ml+700ml</li>
-				    		<li>迷你包700ml+700ml</li>
-				    		<li>贝壳包700ml+700ml</li>
-				    		<li>贝壳包700ml+700ml</li>
-				    		<li>迷你包700ml+700ml</li>
-				    		<li>贝壳包700ml+700ml</li>
+				    		<li class="active2">贝壳包</li>
+				    		<li>迷你包</li>
+				    		<li>贝壳包</li>
+				    		<li>贝壳包</li>
+				    		<li>迷你包</li>
+				    		<li>贝壳包</li>
+				    		<li>贝壳包</li>
+				    		<li>迷你包</li>
+				    		<li>贝壳包</li>
 				    	</ul>
 				    </div>
 				    <span style="font-size: 12px;position: relative;top: 100px;color: #888888;">数量:</span>
@@ -408,12 +409,12 @@
 				</div>
 				<div id="boxBotton">
 					<div id="boxBotton_l">
-						<img src="img/8383f07842a550b653dd763712c8f784.jpg" id="ssmallPic1" class="active"/>
-						<img src="img/33.jpg" id="ssmallPic2"/>
+						<img src="{% static 'img/8383f07842a550b653dd763712c8f784.jpg' %}" id="ssmallPic1" class="active"/>
+						<img src="{% static 'img/33.jpg' %}" id="ssmallPic2"/>
 					</div>
 					<div id="boxBotton_r">
 						<input type="button" id="goumai" value="立即购买" />
-						<input type="button" id="gwc" value="加入购物车" />
+						<a href="{% url 'tpsapp:cart' %}"><input type="button" id="gwc" value="加入购物车" /></a>
 						<a href="#">添加关注（2）</a>
 					</div>
 				</div>				
@@ -421,7 +422,7 @@
 		</div>
 		<div id="addSuccess">
 			<div class="addSuccessOne">
-				<img src="img/success.png"/>
+				<img src="{% static 'img/success.png' %}"/>
 				商品添加成功
 			</div>
 			<div class="addSuccessTwo">
@@ -456,7 +457,7 @@
         			</span>
         		</div>
         		<div id="footer_c_r">
-        			<img src="img/weixin.jpg" style="width: 160px;height: 160px;"/>
+        			<img src="{% static 'img/weixin.jpg' %}" style="width: 160px;height: 160px;"/>
         		</div>
         	</div>
         </div>

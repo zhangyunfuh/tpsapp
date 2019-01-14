@@ -63,3 +63,11 @@ def logout(request):
     response=redirect('tpsapp:homepage')
     request.session.flush()
     return response
+
+
+def detailed(request):
+    return render(request,'detailed.html')
+
+
+def cart(request):
+    return render(request,'cart.html')

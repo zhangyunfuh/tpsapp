@@ -17,8 +17,8 @@
 #boxContent_r{width: 600px;height: 400px;float: right;position: relative;top: 8px;left: 50px;position: relative;float: left;}
 .baoyou{background: red;color: white;width: 50px;height: 20px;text-align: center;line-height: 20px;border-radius: 3px;}
 h3{font-weight: 800;}
-.price{font-size: 36px;color: red;font-weight: 900;font-family: "微软雅黑";}
-.guige{width: 550px;height: 120px; position: absolute;left: 50px;top: 210px;}
+.price{font-size: 28px;color: red;font-weight: 900;font-family: "微软雅黑";}
+.guige{width: 550px;height: 120px; position: absolute;left: 50px;top: 250px;}
 .guige ul li{float: left;font-size: 14px;margin-left:8px ;margin-top: 8px;display: block;width: 126px;height: 26px;border: 1px solid #cccccc;text-align: center;line-height: 26px;cursor:pointer}
 .shuliang{width: 300px;height: 36px;position: relative;left: 56px;top: 76px;}
 .shuliang input[type=text]{width: 46px;height: 30px;border: 1px solid #cccccc;float: left;margin-right: 6px;}
