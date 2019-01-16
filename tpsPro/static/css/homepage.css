@@ -36,7 +36,7 @@
 #list4 li.active{background: red ;}
 #box1{width: 7200px;height: 650px;position: absolute;}
 
-#baby{width: 1200px;height: 580px;margin: 0 auto;}
+#baby{width: 1200px;height: 500px;margin: 0 auto;}
 #babyTop{border-bottom: 1px solid #dcdcdc;height: 30px;width: 1200px;position: relative;margin-bottom: 8px;}
 #babyTop span{border-left:2px solid saddlebrown ;padding-left: 6px;display: block;width: 80px;height: 22px;}
 #baby_l{width:246px ;height: 456px;background: white;float: left;}
@@ -46,8 +46,9 @@
 #baby_l_d ul li{float: left;margin-left: 30px;margin-top: 15px;}
 #baby_l_d ul li a{font-size: 12px;color: black;}
 #baby_l_d ul li a:hover{color: red;}
-#baby_m{width:362px ;height: 456px;float: left;position: relative;overflow: hidden;margin-left: 10px;}
-#baby_m #list5{width: 1810px;height: 456px;position: absolute;}
+#baby_m{width:1100px ;height: 510px;float: left;position: absolute;overflow: hidden;margin-left: 10px;left: 400px;top:1700px;  line-height: 456px}
+#baby_m #list5{width: 1500px;height: 430px;position: absolute;line-height: 430px}
+#bady_m img{float: left;}
 #list55{position: absolute;right: 30%;bottom: 3%;width: 120px;height: 18px;background: aquamarine;border-radius: 10px;opacity: 0.6;}
 #list55 li{float: left;width: 10px;height: 10px;border-radius: 50%;background: white;margin-left: 15px;cursor: pointer;margin-top: 3px;}
 #list55 li.active{background: red ;}

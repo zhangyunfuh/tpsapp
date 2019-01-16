@@ -38,14 +38,25 @@
 					</div>
 					<div id="headerOne_c_r">
 						<div id="headerOne_c_r_r">
-							<span><a href="signIn_Register.html" target="_blank">登录</a><a href="signIn_Register.html" target="_blank">注册</a></span>
-						    <span><span><img src="{% static 'img/star.png' %}" class="star1"/><img src="{% static 'img/red.png' %}" class="star2"/></span>我的关注（0）</span>
-						    <div id="headerOne_c_r_r_1">个人中心<span><img src="{% static 'img/index.png' %}"></span>
+							{% if name %}
+                                <span>用户名：{{ name }}</span>   <a href="{% url 'tpsapp:logout' %}">注销</a>
+
+
+						    <div id="headerOne_c_r_r_1">
+                                <div id="headimg">
+                                    <img src="http://im6.leaderhero.com/emotion/6684/41161076/8916ae014c.jpg">
+                                    <p style="color: #0b3c80;">个人中心</p>
+                                </div>
+
+                                <span><img src="{% static 'img/index.png' %}"></span>
 						    	<ul>
 						    		<li><a href="#">我的订单</a></li>
 						    	</ul>
 						    </div>
-						</div>						
+                            {% else %}
+                                <span><a href="{% url 'tpsapp:login' %}" target="_blank">登录</a><a href="{% url 'tpsapp:login' %}" target="_blank">注册</a></span>
+                            {% endif %}
+						</div>
 					</div>
 				</div>
 			</div>
@@ -342,12 +353,7 @@
 				</div>
 				<ul>
 					<li><a href="#">商城首页</a></li>
-					<li><a href="#">新品上市</a></li>
-					<li><a href="#">口碑热卖</a></li>
-					<li><a href="#">包邮专区</a></li>
-					<li><a href="#">特惠促销</a></li>
-					<li><a href="#">旅游</a></li>
-					<li><a href="#">关于我们</a></li>
+
 				</ul>
 			</div>
 		</div>	

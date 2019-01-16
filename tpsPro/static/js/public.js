@@ -1,5 +1,6 @@
 //下拉导航栏
 $(function(){
+
 	$("#headerNav_n,.headerNav_n").hover(
 		function(){
 		   $(".headerNav_n").show();
@@ -21,75 +22,75 @@ $(function(){
 	    }
 	)
 //轮播图	
-	$.get("json/banner.json",function(data){
-		for(var i=0;i<data.length;i++){
-			
-			function Fa(){
-				var a=0;
-				this.li=$("<li></li>");
-				this.ele=$("<img>");
-				this.ele.css({"width":1425,"height":404});
-				this.ele.attr("src",data[i].img);		
-				this.ele.appendTo($(this.li));
-				this.li.appendTo($("#list1"));
-				$("#list1").css({"width":(data.length+1)*1425+8});
-				$("#list1 li").css({"float":"left","cursor":"pointer"});
-//链接第一个到商品详情				
-				$("#list1 li").click(function(){
-					window.open("detailed.html","blank");
-				})				
-				var timer=setInterval(function(){
-					a++;
-					move();
-				},3000)
-				function move(){
-					if(a<0){
-						$("#list1").css("left",-data.length*1425);
-						a=data.length-2;
-					}
-					if(a>=data.length){
-						$("#list1").css("left",0);
-						a=1;
-					}
-					$("#list1").stop().animate({left:-a*1425},400);
-					if(a==data.length-1){
-						$("#list2 li").eq(0).addClass("active").siblings().removeClass("active");
-					}
-					$("#list2 li").eq(a).addClass("active").siblings().removeClass("active");
-				}
-				$("#list2 li").click(function(){
-					var index=$(this).index();
-					a=index;
-					move();
-				})
-				$("#bannerRight").click(function(){
-					a++;
-					move();
-				})
-				$("#bannerLeft").click(function(){
-					a--;
-					move();
-				})
-				$("#list2,#bannerLeft,#bannerRight").hide();
-				$("#banner").hover(
-					function(){
-					   clearInterval(timer);
-					   $("#list2,#bannerLeft,#bannerRight").fadeIn(500);
-				   },
-					function(){
-						$("#list2,#bannerLeft,#bannerRight").fadeOut(500);
-						clearInterval(timer);
-						timer=setInterval(function(){
-						a++;
-						move();
-				},3000)
-					}
-				)
-			}
-			var s=new Fa();
-		}
-	})
-})
+// 	$.get("json/banner.json",function(data){
+// 		for(var i=0;i<data.length;i++){
+//
+// 			function Fa(){
+// 				var a=0;
+// 				this.li=$("<li></li>");
+// 				this.ele=$("<img>");
+// 				this.ele.css({"width":1425,"height":404});
+// 				this.ele.attr("src",data[i].img);
+// 				this.ele.appendTo($(this.li));
+// 				this.li.appendTo($("#list1"));
+// 				$("#list1").css({"width":(data.length+1)*1425+8});
+// 				$("#list1 li").css({"float":"left","cursor":"pointer"});
+// //链接第一个到商品详情
+// 				$("#list1 li").click(function(){
+// 					window.open("detailed.html","blank");
+// 				})
+// 				var timer=setInterval(function(){
+// 					a++;
+// 					move();
+// 				},3000)
+// 				function move(){
+// 					if(a<0){
+// 						$("#list1").css("left",-data.length*1425);
+// 						a=data.length-2;
+// 					}
+// 					if(a>=data.length){
+// 						$("#list1").css("left",0);
+// 						a=1;
+// 					}
+// 					$("#list1").stop().animate({left:-a*1425},400);
+// 					if(a==data.length-1){
+// 						$("#list2 li").eq(0).addClass("active").siblings().removeClass("active");
+// 					}
+// 					$("#list2 li").eq(a).addClass("active").siblings().removeClass("active");
+// 				}
+// 				$("#list2 li").click(function(){
+// 					var index=$(this).index();
+// 					a=index;
+// 					move();
+// 				})
+// 				$("#bannerRight").click(function(){
+// 					a++;
+// 					move();
+// 				})
+// 				$("#bannerLeft").click(function(){
+// 					a--;
+// 					move();
+// 				})
+// 				$("#list2,#bannerLeft,#bannerRight").hide();
+// 				$("#banner").hover(
+// 					function(){
+// 					   clearInterval(timer);
+// 					   $("#list2,#bannerLeft,#bannerRight").fadeIn(500);
+// 				   },
+// 					function(){
+// 						$("#list2,#bannerLeft,#bannerRight").fadeOut(500);
+// 						clearInterval(timer);
+// 						timer=setInterval(function(){
+// 						a++;
+// 						move();
+// 				},3000)
+// 					}
+// 				)
+// 			}
+// 			var s=new Fa();
+// 		}
+// 	})
+// })
 
 //头部第一部分
 $(function(){

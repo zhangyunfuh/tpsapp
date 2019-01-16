@@ -1,4 +1,5 @@
 $(function () {
+
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         effect: 'cube',
@@ -10,6 +11,9 @@ $(function () {
             shadowScale: 0.94
         }
 
-    });
+    })
+
+
+
 
 })

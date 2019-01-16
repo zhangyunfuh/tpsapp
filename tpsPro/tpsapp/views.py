@@ -2,9 +2,10 @@ import hashlib
 import random
 import time
 from django.shortcuts import render, redirect
+from django.http import JsonResponse
 
 # Create your views here.
-from tpsapp.models import User
+from tpsapp.models import User,wheel
 
 from django.http import HttpResponse,HttpRequest
 def homepage(request):
@@ -36,10 +37,12 @@ def register(request):
         user.name=request.POST.get('name')
         print(request.POST)
         user.password=generate_password(request.POST.get('password'))
-        user.token=generate_token()
+        user.token = generate_token()
         user.save()
         response=redirect('tpsapp:homepage')
+
         request.session['token']=user.token
+        request.session.set_expiry(0)
         return response
 def login(request):
     if request.method=='GET':
@@ -53,7 +56,7 @@ def login(request):
             user=users.first()
             response = redirect('tpsapp:homepage')
             request.session['token']=user.token
-            request.session.set_expiry(30)
+            request.session.set_expiry(0)
             return response
         else:
             err='用户名或密码错误'
@@ -66,8 +69,37 @@ def logout(request):
 
 
 def detailed(request):
-    return render(request,'detailed.html')
+    token = request.session.get('token')
+    users = User.objects.filter(token=token)
+    if users.count():
+        user = users.first()
+        name = user.name
+    else:
+        name = None
+    return render(request, 'detailed.html', {'name': name})
+
 
 
 def cart(request):
     return render(request,'cart.html')
+
+
+def checkuser(request):
+    username=request.GET.get('username')
+    users=User.objects.filter(name=username)
+    if users.exists():
+        return JsonResponse({'msg': '账号被占用','status':0})
+    else:
+        return JsonResponse({'msg': '可以使用！','status':1})
+
+
+def detailed2(request):
+    token = request.session.get('token')
+    users = User.objects.filter(token=token)
+    if users.count():
+        user = users.first()
+        name = user.name
+    else:
+        name = None
+    return render(request, 'detailed2.html', {'name': name})
+
