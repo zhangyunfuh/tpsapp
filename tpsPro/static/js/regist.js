@@ -27,7 +27,7 @@ $(function(){
         }
     })
 
-    $('.psd').blur(function(){
+    $('#psd1').blur(function(){
         var reg=/^\w{6,16}$/;
         var isReg = reg.test($(this).val());
         if (!isReg) {

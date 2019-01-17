@@ -352,25 +352,25 @@
 					</ul>
 				</div>
 				<ul>
-					<li><a href="#">商城首页</a></li>
+					<li><a href="{% url 'tpsapp:homepage' %}">商城首页</a></li>
 
 				</ul>
 			</div>
 		</div>	
 <!--商品详情部分-->	<!--商品详情部分-->	<!--商品详情部分-->	<!--商品详情部分-->	<!--商品详情部分-->	
 		<div id="box">
-			<div id="boxTop">
-				<img src="{% static 'img/s.jpg' %}"/>
-				<a href="#">首页</a>
-				<span>&gt;</span>
-				<a href="#">家居日用</a>
-				<span>&gt;</span>
-				<a href="#">精美餐具</a>
-				<span>&gt;</span>
-				<a href="#">碗具</a>
-				<span>&gt;</span>
-				<span>艾贝德 高硼硅 微波炉耐热玻璃便当盒2件套带包赠送三件套餐具 多种规格选择 全国包邮</span>				
-			</div>
+{#			<div id="boxTop">#}
+{#				<img src="{% static 'img/s.jpg' %}"/>#}
+{#				<a href="#">首页</a>#}
+{#				<span>&gt;</span>#}
+{#				<a href="#">家居日用</a>#}
+{#				<span>&gt;</span>#}
+{#				<a href="#">精美餐具</a>#}
+{#				<span>&gt;</span>#}
+{#				<a href="#">碗具</a>#}
+{#				<span>&gt;</span>#}
+{#				<span>艾贝德 高硼硅 微波炉耐热玻璃便当盒2件套带包赠送三件套餐具 多种规格选择 全国包邮</span>				#}
+{#			</div>#}
 		
 			<div id="boxContent">
 				<div id="smallPicBox"><!--商品主图-->	
@@ -385,33 +385,20 @@
 				</div>
 <!--商品说明-->				
 				<div id="boxContent_r">
-					<div class="baoyou">包邮</div>
-					<h3>艾贝德 高硼硅 微波炉耐热玻璃便当盒2件套带包赠送三件套餐具 多种规格选择 全国包邮</h3>
-				    <span style="color: red;font-size: 14px;">新疆，西藏，青海，内蒙古偏远地区不发货</span><br /><br />
-				    <span>商品编码:65687968-1</span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9c9c9c;">原产地: 中国</span><br />
-				    <span style="font-size: 12px;color: #888888;">价格：</span><span class="price">￥<i style="font-style: normal;">18</i></span><br /><br />
-				    <span style="font-size: 12px;color: #888888;">规格:</span><br />
-				    <div class="guige">
-				    	<ul id="guige">
-				    		<li class="active2">贝壳包</li>
-				    		<li>迷你包</li>
-				    		<li>贝壳包</li>
-				    		<li>贝壳包</li>
-				    		<li>迷你包</li>
-				    		<li>贝壳包</li>
-				    		<li>贝壳包</li>
-				    		<li>迷你包</li>
-				    		<li>贝壳包</li>
-				    	</ul>
-				    </div>
-				    <span style="font-size: 12px;position: relative;top: 100px;color: #888888;">数量:</span>
-				    <div class="shuliang">
-				    	<input type="text" value="1" id="shuliang"/>
-				    	<span id="add">+</span><br />
-				    	<span id="sub">-</span>
-				    	<span style="width: 130px;position: absolute;left:80px ;bottom: 10px;font-size: 12px;border: none;">库存：993</span>
-				    </div>
-				    <span style="position: relative;top: 90px;font-size: 14px;color: #5b5b5b;">发货地：深圳</span>
+					<div class="baoyou">包邮</div><br /><br />
+					<h3>{{ detail.title }}</h3>
+{#				    <span style="color: red;font-size: 14px;">新疆，西藏，青海，内蒙古偏远地区不发货</span><br /><br />#}
+				    <span style="color: #9c9c9c;">原产地: {{ detail.addr }}</span><br /><br /><br />
+				    <span style="font-size: 12px;color: #888888;">价格：</span><span class="price">￥<i style="font-style: normal;">{{ detail.price }}</i></span>
+				    <span style="font-size: 12px;position: relative;top: 100px;right: 100px; color: #888888;">数量:</span>
+                    <div class="shuliang">
+                        <span id="sub" style="color: blue;height: 25px;line-height: 25px">-</span>
+
+                        <span class="numb" style="width: 50px;height: 25px;line-height: 25px">1</span>
+                        <span id="add" style="color: red;height: 25px;line-height: 25px">+</span>
+
+                    </div>
+
 				</div>
 				<div id="boxBotton">
 					<div id="boxBotton_l">
@@ -421,7 +408,7 @@
 					<div id="boxBotton_r">
 						<input type="button" id="goumai" value="立即购买" />
 						<a href="{% url 'tpsapp:cart' %}"><input type="button" id="gwc" value="加入购物车" /></a>
-						<a href="#">添加关注（2）</a>
+
 					</div>
 				</div>				
 			</div>

@@ -369,7 +369,7 @@
             </ul>
         </div>
         <ul>
-            <li><a href="#">商城首页</a></li>
+            <li><a href="{% url 'tpsapp:homepage' %}">商城首页</a></li>
             <li><a href="#">新品上市</a></li>
             <li><a href="#">口碑热卖</a></li>
             <li><a href="#">包邮专区</a></li>
@@ -382,10 +382,10 @@
 
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src='http://127.0.0.1:8000/static/img/1.jpg' alt=""></div>
-        <div class="swiper-slide"><img src='http://127.0.0.1:8000/static/img/2.jpg' alt=""></div>
-        <div class="swiper-slide"><img src='http://127.0.0.1:8000/static/img/3.jpg' alt=""></div>
-        <div class="swiper-slide"><img src='http://127.0.0.1:8000/static/img/4.jpg' alt=""></div>
+        {% for img in imgs %}
+            <div class="swiper-slide"><img src='{{ img.img }}' alt=""></div>
+        {% endfor %}
+
 
     </div>
     <div class="swiper-pagination"></div>
@@ -448,7 +448,7 @@
     <!-- 母婴-->   <!-- 母婴-->
     <div id="baby" class="1">
         <div id="babyTop">
-            <span style="float: left;">母婴用品</span>
+            <spyongan style="float: left;">母婴用品</spyongan>
             <span style="float: right;border: 0;font-size: 12px;cursor: pointer;">更多商品&gt;</span>
         </div>
         <div id="baby_l">
@@ -466,11 +466,11 @@
             </div>
         </div>
         <div id="baby_m">
+            {% for comp in comps %}
+                <a href="{% url 'tpsapp:detailed' comp.id %}"><img src='{{ comp.img }}'></a>
 
-            <a href="{% url 'tpsapp:detailed' %}"><img src="{% static 'img/56e29bfb9d4c0_main.jpg' %}"></a>
 
-            <a href="{% url 'tpsapp:detailed2' %}"><img src="{% static 'img/57b6815cc3c63_main.jpg' %}"></a>
-            <a href="#"><img src="{% static 'img/57c8ea5a8fbd4_main.jpg' %}"></a>
+            {% endfor %}
 
 
         </div>

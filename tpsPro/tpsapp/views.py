@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.http import JsonResponse
 
 # Create your views here.
-from tpsapp.models import User,wheel
+from tpsapp.models import User, wheel,  Detail
 
 from django.http import HttpResponse,HttpRequest
 def homepage(request):
@@ -16,7 +16,9 @@ def homepage(request):
         name=user.name
     else:
         name=None
-    return render(request,'homepage.html',{'name':name})
+    comp=Detail.objects.all()
+    imgs=wheel.objects.all()
+    return render(request,'homepage.html',{'name':name,'comps':comp,'imgs':imgs})
 
 def generate_token():
     token =str(time.time()) + str(random.random())
@@ -68,7 +70,7 @@ def logout(request):
     return response
 
 
-def detailed(request):
+def detailed(request,proid):
     token = request.session.get('token')
     users = User.objects.filter(token=token)
     if users.count():
@@ -76,7 +78,8 @@ def detailed(request):
         name = user.name
     else:
         name = None
-    return render(request, 'detailed.html', {'name': name})
+    detail=Detail.objects.get(id=proid)
+    return render(request, 'detailed.html', {'name': name,'detail':detail})
 
 
 
@@ -92,14 +95,21 @@ def checkuser(request):
     else:
         return JsonResponse({'msg': '可以使用！','status':1})
 
+#
+# def detailed2(request):
+#     token = request.session.get('token')
+#     users = User.objects.filter(token=token)
+#     if users.count():
+#         user = users.first()
+#         name = user.name
+#     else:
+#         name = None
+#     return render(request, 'detailed2.html', {'name': name})
 
-def detailed2(request):
-    token = request.session.get('token')
-    users = User.objects.filter(token=token)
-    if users.count():
-        user = users.first()
-        name = user.name
+def addcart(request):
+    token=request.session.get('token')
+    print('添加购物车')
+    if token:
+        pass
     else:
-        name = None
-    return render(request, 'detailed2.html', {'name': name})
-
+        return JsonResponse({'msg':'登入后操作','status':0})

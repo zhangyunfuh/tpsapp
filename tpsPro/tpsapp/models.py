@@ -13,3 +13,19 @@ class wheel(models.Model):
     class Meta:
         db_table='wheel'
 
+class Detail(models.Model):
+    title=models.CharField(max_length=200)
+    addr=models.CharField(max_length=20)
+    price=models.CharField(max_length=10)
+    img=models.CharField(max_length=200)
+    class Meta:
+        db_table='tpsapp_detail'
+
+
+class Cart(models.Model):
+    user=models.ForeignKey(User)
+    products=models.ForeignKey(Detail)
+    number=models.IntegerField()
+    isselect=models.BooleanField(default=True)
+    class Meta:
+        db_table='tpsapp_cart'
