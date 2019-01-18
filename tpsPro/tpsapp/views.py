@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.http import JsonResponse
 
 # Create your views here.
-from tpsapp.models import User, wheel,  Detail
+from tpsapp.models import User, wheel, Detail, Cart
 
 from django.http import HttpResponse,HttpRequest
 def homepage(request):
@@ -110,6 +110,25 @@ def addcart(request):
     token=request.session.get('token')
     print('添加购物车')
     if token:
-        pass
+        users=User.objects.get(token=token)
+        detailid=request.GET.get('detailid')
+        details=Detail.objects.get(id=detailid)
+        carts=Cart.objects.filter(user=users).filter(products=details)
+        if carts.exists():
+            cart=carts.first()
+            cart.number=request.GET.get('numb')
+            cart.save()
+            msg={'msg':'{}-修改购物车成功'.format(details.title),'number':cart.number,'status':1}
+            return JsonResponse(msg)
+        else:
+            carts = Cart()
+            carts.user = users
+            carts.products = details
+            carts.number=request.GET.get('numb')
+            carts.isselect=True
+            msg={'msg':'{}-添加购物车成功'.format(details.title),'number':carts.number,'status':1}
+
     else:
-        return JsonResponse({'msg':'登入后操作','status':0})
+
+
+        return JsonResponse({'msg':'登入后购买','status':0})

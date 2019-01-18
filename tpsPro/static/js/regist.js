@@ -9,10 +9,10 @@ $(function(){
 
             // console.log('123456')
         } else {
-            var $that = $(this)
+            var $that = $(this);
 
             $.get('/checkuser/',{'username':$(this).val()},function(response){
-                console.log(response)
+                console.log(response);
 
 
                 if(response.status==1){
