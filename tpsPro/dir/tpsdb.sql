@@ -291,7 +291,7 @@ CREATE TABLE `django_session` (
 
 LOCK TABLES `django_session` WRITE;
 /*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
-INSERT INTO `django_session` VALUES ('116v6o4l833dfjw8ox3tgoyg50hrwcvz','ZDk1ZDg5ZGVkZWU4M2VkMTYyMzliNzViY2NlY2UxMDc0YjU0MWJiMDp7InRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTciLCJfc2Vzc2lvbl9leHBpcnkiOjMwfQ==','2019-01-12 09:46:55.426882'),('1fnrr48kqt7cihld9y019q8ex4xilfen','ZDk1ZDg5ZGVkZWU4M2VkMTYyMzliNzViY2NlY2UxMDc0YjU0MWJiMDp7InRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTciLCJfc2Vzc2lvbl9leHBpcnkiOjMwfQ==','2019-01-12 09:52:21.293934'),('441y5tpeqp9xr6c8rd08n0efnu3tct0f','ZDcxN2RlN2FmNDA0NWFlNjRjNDlmNzFmYjk0ZDI2ZGMxOGI2MTU3Zjp7InRva2VuIjoiYTY2MDVmMzQ4MzJiNTdkMjBkZTFlZmRmNThlMzczNzMiLCJfc2Vzc2lvbl9leHBpcnkiOjB9','2019-01-30 09:44:20.792928'),('6e0v0z78s359yhhwhs8dgdi26wwnis0z','MjI3NzRlMDBhMWZkZjVlYjQ5Yzg2MmZkNjZlNDM0NWQ3NjYxN2VjZjp7Il9zZXNzaW9uX2V4cGlyeSI6MzAsInRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTcifQ==','2019-01-15 11:50:19.170741'),('6qqmmp51mtgebh16l9rb9hq914ee10uy','MDQ1NjBlZjQ2YTQwZDRhZDE2YWM3ZTIxN2FmM2YwZWY5NDlhYTUyMjp7Il9zZXNzaW9uX2V4cGlyeSI6MzAsInRva2VuIjoiYTY2MDVmMzQ4MzJiNTdkMjBkZTFlZmRmNThlMzczNzMifQ==','2019-01-16 09:35:10.961682'),('dz9iws00c3l5etpmkz75xvzg5y91peb6','ZDk1ZDg5ZGVkZWU4M2VkMTYyMzliNzViY2NlY2UxMDc0YjU0MWJiMDp7InRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTciLCJfc2Vzc2lvbl9leHBpcnkiOjMwfQ==','2019-01-12 08:07:06.049809'),('evi6pi4mhnio9f8mlgkrlyclhb88gs02','YTE5MjEyMmY1MzRmNjY4ZDJlZDE0YTY2MzczODZiOWFlMjQwOTY4Mjp7Il9zZXNzaW9uX2V4cGlyeSI6MzAsInRva2VuIjoiMWMxM2NmZjljNzliN2UwOTAyNDFjNThjZTg0YzY2ZDEifQ==','2019-01-11 10:56:04.464299'),('k1h7nldc21ifwmxlo33fkxrm4n3chzz3','ZTE1MzJjNTc4ZTA0OTk0ZjRmMzkzNzA5ZTUxMTVkOWU5NzZlMDQxZTp7InRva2VuIjoiMTEzM2MxODlmMzU1Y2JkMzZjMThiY2U1N2RjMTU5YTIiLCJfc2Vzc2lvbl9leHBpcnkiOjMwfQ==','2019-01-11 10:51:37.444243'),('lzg3s1ptilgf7dv8vdyaopnt2y0y0gj0','MjI3NzRlMDBhMWZkZjVlYjQ5Yzg2MmZkNjZlNDM0NWQ3NjYxN2VjZjp7Il9zZXNzaW9uX2V4cGlyeSI6MzAsInRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTcifQ==','2019-01-14 06:46:50.991030'),('m4kkidwc42yty2uars7o1bj5b4v63383','MjI3NzRlMDBhMWZkZjVlYjQ5Yzg2MmZkNjZlNDM0NWQ3NjYxN2VjZjp7Il9zZXNzaW9uX2V4cGlyeSI6MzAsInRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTcifQ==','2019-01-11 11:03:07.266156'),('m5gah0zfv58tj0y42ztvw6z228texp3l','ZDcxN2RlN2FmNDA0NWFlNjRjNDlmNzFmYjk0ZDI2ZGMxOGI2MTU3Zjp7InRva2VuIjoiYTY2MDVmMzQ4MzJiNTdkMjBkZTFlZmRmNThlMzczNzMiLCJfc2Vzc2lvbl9leHBpcnkiOjB9','2019-01-30 12:00:37.655160'),('mgnr4sc4rn43o16q3mghdqqbv2vkc6r5','YWYzNTFhNDU3YmI0NWE1NmM5OTkwMzVkMjIyZjUwZDJlZDFjNDdjZTp7Il9zZXNzaW9uX2V4cGlyeSI6MzAsInRva2VuIjoiZDllMWNiNzQzZjY4NjZmYmY1ODZmMzkyNjM4NDE4Y2MifQ==','2019-01-11 10:49:41.920718'),('tr54nrgjr3hbgk7gxuh6cf1fwasmxets','ZDk1ZDg5ZGVkZWU4M2VkMTYyMzliNzViY2NlY2UxMDc0YjU0MWJiMDp7InRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTciLCJfc2Vzc2lvbl9leHBpcnkiOjMwfQ==','2019-01-12 07:47:55.842364');
+INSERT INTO `django_session` VALUES ('116v6o4l833dfjw8ox3tgoyg50hrwcvz','ZDk1ZDg5ZGVkZWU4M2VkMTYyMzliNzViY2NlY2UxMDc0YjU0MWJiMDp7InRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTciLCJfc2Vzc2lvbl9leHBpcnkiOjMwfQ==','2019-01-12 09:46:55.426882'),('1fnrr48kqt7cihld9y019q8ex4xilfen','ZDk1ZDg5ZGVkZWU4M2VkMTYyMzliNzViY2NlY2UxMDc0YjU0MWJiMDp7InRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTciLCJfc2Vzc2lvbl9leHBpcnkiOjMwfQ==','2019-01-12 09:52:21.293934'),('441y5tpeqp9xr6c8rd08n0efnu3tct0f','ZDcxN2RlN2FmNDA0NWFlNjRjNDlmNzFmYjk0ZDI2ZGMxOGI2MTU3Zjp7InRva2VuIjoiYTY2MDVmMzQ4MzJiNTdkMjBkZTFlZmRmNThlMzczNzMiLCJfc2Vzc2lvbl9leHBpcnkiOjB9','2019-01-30 09:44:20.792928'),('6e0v0z78s359yhhwhs8dgdi26wwnis0z','MjI3NzRlMDBhMWZkZjVlYjQ5Yzg2MmZkNjZlNDM0NWQ3NjYxN2VjZjp7Il9zZXNzaW9uX2V4cGlyeSI6MzAsInRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTcifQ==','2019-01-15 11:50:19.170741'),('6qqmmp51mtgebh16l9rb9hq914ee10uy','MDQ1NjBlZjQ2YTQwZDRhZDE2YWM3ZTIxN2FmM2YwZWY5NDlhYTUyMjp7Il9zZXNzaW9uX2V4cGlyeSI6MzAsInRva2VuIjoiYTY2MDVmMzQ4MzJiNTdkMjBkZTFlZmRmNThlMzczNzMifQ==','2019-01-16 09:35:10.961682'),('6ubvy4tvh3e6or0jo0728vn35qlc8t4u','OGIzZWEwYzU4MzdkNDg1NWVhODhhZDk1ZjgxNThhZWY0OTA1MWE2ZDp7Il9zZXNzaW9uX2V4cGlyeSI6MCwidG9rZW4iOiJhNjYwNWYzNDgzMmI1N2QyMGRlMWVmZGY1OGUzNzM3MyJ9','2019-02-01 02:36:00.928341'),('dz9iws00c3l5etpmkz75xvzg5y91peb6','ZDk1ZDg5ZGVkZWU4M2VkMTYyMzliNzViY2NlY2UxMDc0YjU0MWJiMDp7InRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTciLCJfc2Vzc2lvbl9leHBpcnkiOjMwfQ==','2019-01-12 08:07:06.049809'),('evi6pi4mhnio9f8mlgkrlyclhb88gs02','YTE5MjEyMmY1MzRmNjY4ZDJlZDE0YTY2MzczODZiOWFlMjQwOTY4Mjp7Il9zZXNzaW9uX2V4cGlyeSI6MzAsInRva2VuIjoiMWMxM2NmZjljNzliN2UwOTAyNDFjNThjZTg0YzY2ZDEifQ==','2019-01-11 10:56:04.464299'),('k1h7nldc21ifwmxlo33fkxrm4n3chzz3','ZTE1MzJjNTc4ZTA0OTk0ZjRmMzkzNzA5ZTUxMTVkOWU5NzZlMDQxZTp7InRva2VuIjoiMTEzM2MxODlmMzU1Y2JkMzZjMThiY2U1N2RjMTU5YTIiLCJfc2Vzc2lvbl9leHBpcnkiOjMwfQ==','2019-01-11 10:51:37.444243'),('lzg3s1ptilgf7dv8vdyaopnt2y0y0gj0','MjI3NzRlMDBhMWZkZjVlYjQ5Yzg2MmZkNjZlNDM0NWQ3NjYxN2VjZjp7Il9zZXNzaW9uX2V4cGlyeSI6MzAsInRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTcifQ==','2019-01-14 06:46:50.991030'),('m4kkidwc42yty2uars7o1bj5b4v63383','MjI3NzRlMDBhMWZkZjVlYjQ5Yzg2MmZkNjZlNDM0NWQ3NjYxN2VjZjp7Il9zZXNzaW9uX2V4cGlyeSI6MzAsInRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTcifQ==','2019-01-11 11:03:07.266156'),('m5gah0zfv58tj0y42ztvw6z228texp3l','ZDcxN2RlN2FmNDA0NWFlNjRjNDlmNzFmYjk0ZDI2ZGMxOGI2MTU3Zjp7InRva2VuIjoiYTY2MDVmMzQ4MzJiNTdkMjBkZTFlZmRmNThlMzczNzMiLCJfc2Vzc2lvbl9leHBpcnkiOjB9','2019-01-30 12:00:37.655160'),('mgnr4sc4rn43o16q3mghdqqbv2vkc6r5','YWYzNTFhNDU3YmI0NWE1NmM5OTkwMzVkMjIyZjUwZDJlZDFjNDdjZTp7Il9zZXNzaW9uX2V4cGlyeSI6MzAsInRva2VuIjoiZDllMWNiNzQzZjY4NjZmYmY1ODZmMzkyNjM4NDE4Y2MifQ==','2019-01-11 10:49:41.920718'),('tr54nrgjr3hbgk7gxuh6cf1fwasmxets','ZDk1ZDg5ZGVkZWU4M2VkMTYyMzliNzViY2NlY2UxMDc0YjU0MWJiMDp7InRva2VuIjoiNWZhNDgxMzU1ODc3MmMwMTkyOWZiY2E0MTljODViOTciLCJfc2Vzc2lvbl9leHBpcnkiOjMwfQ==','2019-01-12 07:47:55.842364');
 /*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -313,7 +313,7 @@ CREATE TABLE `tpsapp_cart` (
   KEY `tpsapp_cart_user_id_04313077_fk_tpsapp_user_id` (`user_id`),
   CONSTRAINT `tpsapp_cart_products_id_a52da638_fk_tpsapp_detail_id` FOREIGN KEY (`products_id`) REFERENCES `tpsapp_detail` (`id`),
   CONSTRAINT `tpsapp_cart_user_id_04313077_fk_tpsapp_user_id` FOREIGN KEY (`user_id`) REFERENCES `tpsapp_user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -322,6 +322,7 @@ CREATE TABLE `tpsapp_cart` (
 
 LOCK TABLES `tpsapp_cart` WRITE;
 /*!40000 ALTER TABLE `tpsapp_cart` DISABLE KEYS */;
+INSERT INTO `tpsapp_cart` VALUES (1,2,1,1,19),(2,3,1,2,19);
 /*!40000 ALTER TABLE `tpsapp_cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -348,7 +349,7 @@ CREATE TABLE `tpsapp_detail` (
 
 LOCK TABLES `tpsapp_detail` WRITE;
 /*!40000 ALTER TABLE `tpsapp_detail` DISABLE KEYS */;
-INSERT INTO `tpsapp_detail` VALUES (1,'艾贝德 高硼硅 微波炉耐热玻璃便当盒2件套带包赠送三件套餐具 多种规格选择 全国包邮','中国','18','http://127.0.0.1:8002/static/img/56e29bfb9d4c0_main.jpg'),(2,'艾贝德 高硼硅 微波炉耐热玻璃便当盒2件套带包赠送五件套餐具 全国包邮','中国','20','http://127.0.0.1:8002/static/img/57b6815cc3c63_main.jpg');
+INSERT INTO `tpsapp_detail` VALUES (1,'艾贝德 高硼硅 微波炉耐热玻璃便当盒2件套带包赠送三件套餐具 多种规格选择 全国包邮','中国','18','http://wx2.sinaimg.cn/large/a7ab06b1gy1fzas8rqdfwj206y06y0st.jpg'),(2,'艾贝德 高硼硅 微波炉耐热玻璃便当盒2件套带包赠送五件套餐具 全国包邮','中国','20','http://wx3.sinaimg.cn/large/a7ab06b1gy1fzas8rbx2hj206y06y74b.jpg');
 /*!40000 ALTER TABLE `tpsapp_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -400,7 +401,7 @@ CREATE TABLE `wheel` (
 
 LOCK TABLES `wheel` WRITE;
 /*!40000 ALTER TABLE `wheel` DISABLE KEYS */;
-INSERT INTO `wheel` VALUES (1,'http://127.0.0.1:8000/static/img/1.jpg','12345'),(2,'http://127.0.0.1:8000/static/img/2.jpg','12346'),(3,'http://127.0.0.1:8000/static/img/3.jpg','12347'),(4,'http://127.0.0.1:8000/static/img/4.jpg','12348');
+INSERT INTO `wheel` VALUES (1,'http://wx3.sinaimg.cn/large/a7ab06b1gy1fzas8r3nkvj213h0bagmb.jpg','12345'),(2,'http://wx2.sinaimg.cn/large/a7ab06b1gy1fzas8stv1dj213e0b8mz5.jpg','12346'),(3,'http://wx2.sinaimg.cn/large/a7ab06b1gy1fzas8sqlmmj213i0b8n01.jpg','12347'),(4,'http://wx1.sinaimg.cn/large/a7ab06b1gy1fzas8rbw8xj213i0cital.jpg','12348');
 /*!40000 ALTER TABLE `wheel` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -413,4 +414,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-17 14:55:10
+-- Dump completed on 2019-01-18 16:29:00

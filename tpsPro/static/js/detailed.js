@@ -7,15 +7,20 @@ $(function(){
 			console.log(response)
 			if(response.status==0){
 				window.open('/login/',target='_self')
-			}else{
-
 			}
 		})
 	})
 
-	$('.shuliang #sub').click(function(){
-		console.log('减')
-	})
+	$('.shuliang #sub').click(function() {
+        console.log('减')
+        $.get('/addcart/', data, function (response) {
+            if (response.status == 0) {
+            	window.open('/login/',target='_self')
+            }
+
+        })
+
+    })
 
 
 

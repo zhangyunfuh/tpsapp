@@ -18,7 +18,8 @@ def homepage(request):
         name=None
     comp=Detail.objects.all()
     imgs=wheel.objects.all()
-    return render(request,'homepage.html',{'name':name,'comps':comp,'imgs':imgs})
+    carts = Cart.objects.all()
+    return render(request,'homepage.html',{'name':name,'comps':comp,'imgs':imgs,'carts':carts})
 
 def generate_token():
     token =str(time.time()) + str(random.random())
@@ -79,12 +80,23 @@ def detailed(request,proid):
     else:
         name = None
     detail=Detail.objects.get(id=proid)
-    return render(request, 'detailed.html', {'name': name,'detail':detail})
+    carts=Cart.objects.all()
+    return render(request, 'detailed.html', {'name': name,'detail':detail,'carts':carts})
 
 
 
 def cart(request):
-    return render(request,'cart.html')
+    token = request.session.get('token')
+    users = User.objects.filter(token=token)
+    if users.count():
+        user = users.first()
+        name = user.name
+    else:
+        name = None
+    carts=Cart.objects.all()
+
+
+    return render(request,'cart.html',{'name':name,'carts':carts})
 
 
 def checkuser(request):
@@ -108,7 +120,8 @@ def checkuser(request):
 
 def addcart(request):
     token=request.session.get('token')
-    print('添加购物车')
+
+    print(token)
     if token:
         users=User.objects.get(token=token)
         detailid=request.GET.get('detailid')
@@ -126,9 +139,9 @@ def addcart(request):
             carts.products = details
             carts.number=request.GET.get('numb')
             carts.isselect=True
+            carts.save()
             msg={'msg':'{}-添加购物车成功'.format(details.title),'number':carts.number,'status':1}
-
+            return JsonResponse(msg)
     else:
-
 
         return JsonResponse({'msg':'登入后购买','status':0})

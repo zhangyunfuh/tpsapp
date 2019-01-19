@@ -4,10 +4,10 @@
 .span2{border: 1px solid red;display: block;width: 24px;height: 20px;float: left;text-align: center;line-height: 20px;color: red;}
 th{border: none; }
 td{border: none;border-top: 1px solid firebrick;background: white;}
-#sureBox{width: 1190px;height: 120px;background: #fefbf4;margin: 5px;position: relative;}
+#sureBox{width: 252px;height: 120px;background: #fefbf4;margin: 5px;position: relative;bottom: 120px;left: 850px}
 i{font-style: normal;}
-#sureBox .span6{position: absolute;right: 9px;top: 15px;}
-#sureBox .span7{position: absolute;right: 9px;top: 40px;font-weight: 700;color: red;}
+#sureBox .span6{position: absolute;right: 0px;top: 15px;}
+#sureBox .span7{position: absolute;right: 30px;top: 40px;font-weight: 700;color: red;}
 #sureBox input{position: absolute;right: 9px;top: 70px;width: 120px;height: 30px;background: red;color: white;border: none;border-radius:1px}
 .num1,.num2{display: block;width: 20px;height: 20px;border: 1px solid #666;background: #fefbf4;text-align: center;line-height: 20px;float: left;margin-left: 26px;cursor:pointer}
 .num2{margin-left: 0px;}
@@ -23,3 +23,4 @@ i{font-style: normal;}
 .img{width: 60px;height: 60px;position: absolute;left: 0px;top: 0;margin: 5px;}
 .num{width: 30px;height: 16px;float: left;}
 #ck{cursor: pointer;}
+

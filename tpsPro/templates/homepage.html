@@ -80,23 +80,26 @@
 
         <div id="headerTwo_c">
             <img src="{% static 'img/logo.png' %}" id="homepage"/>
-            <input type="button" id="search_b"/>
-            <div id="shoppingCart">
-                <span style="position: relative;left: 15px;"></span>
-                <br/>
-                <div id="shoppingCart_c">
-                    <img src="{% static 'img/gwc.png' %}"/><span>购物车</span><img src="{% static 'img/indexred.png' %}"/>
+            {% if name %}
+                <div id="shoppingCart">
+
+                    <a href="{% url 'tpsapp:cart' %}"><img src="{% static 'img/gwc.png' %}"/><span>购物车 &nbsp;&nbsp;<i
+                            style="color: black">{{ carts.count }}</i></span>
+                    </a>
                 </div>
-            </div>
+            {% else %}
+                <div id="shoppingCart">
+                 <a href="#"><img src="{% static 'img/gwc.png' %}"/><span>登入后操作</span>
+                    </a>
+                </div>
+            {% endif %}
+
+
         </div>
     </div>
 
     <div id="headerNav">
-        <div id="headerNav_n">
-            全部商品分类
-            <img src="{% static 'img/index_rr.png' %}"/>
 
-        </div>
         <ul>
             <li><a href="{% url 'tpsapp:homepage' %}">商城首页</a></li>
             <li><a href="#">新品上市</a></li>
@@ -111,8 +114,8 @@
 
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        {% for img in imgs %}
-            <div class="swiper-slide"><img src='{{ img.img }}' alt=""></div>
+        {% for im in imgs %}
+            <div class="swiper-slide"><img src='{{ im.img }}' alt=""></div>
         {% endfor %}
 
 
@@ -205,251 +208,7 @@
         </div>
 
     </div>
-    <!--美妆-->        <!--美妆-->
-    <div id="beauty" class="1">
-        <div id="beautyTop">
-            <span style="float: left;">美妆个护</span>
-            <span style="float: right;border: 0;font-size: 12px;cursor: pointer;">更多商品&gt;</span>
-        </div>
-        <div id="beauty_l">
-            <img src="{% static 'img/cate_35.jpg' %}"/>
-            <div id="beauty_l_d">
-                <ul>
-                    <li><a href="#">婴幼儿奶粉</a></li>
-                    <li><a href="#">成人奶粉</a></li>
-                    <li><a href="#">喂养洗护用品</a></li>
-                    <li><a href="#">尿裤湿巾</a></li>
-                    <li><a href="#">婴童服饰</a></li>
-                    <li><a href="#">玩具乐器</a></li>
-                    <li><a href="#">婴幼儿辅食</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="beauty_m">
-            <ul id="list6">
 
-            </ul>
-            <ul id="list66">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div id="list6Left">
-                &lt;
-            </div>
-            <div id="list6Right">
-                &gt;
-            </div>
-        </div>
-        <div id="beauty_r">
-
-        </div>
-    </div>
-    <!--食品-->    <!--食品-->    <!--食品-->
-    <div id="food" class="1">
-        <div id="foodTop">
-            <span style="float: left;">食品、酒水</span>
-            <span style="float: right;border: 0;font-size: 12px;cursor: pointer;">更多商品&gt;</span>
-        </div>
-        <div id="food_l">
-            <img src="{% static 'img/cate_92.jpg' %}"/>
-            <div id="food_l_d">
-                <ul>
-                    <li><a href="#">婴幼儿奶粉</a></li>
-                    <li><a href="#">成人奶粉</a></li>
-                    <li><a href="#">喂养洗护用品</a></li>
-                    <li><a href="#">尿裤湿巾</a></li>
-                    <li><a href="#">婴童服饰</a></li>
-                    <li><a href="#">玩具乐器</a></li>
-                    <li><a href="#">婴幼儿辅食</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="food_m">
-            <ul id="list7">
-
-            </ul>
-            <ul id="list77">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div id="list7Left">
-                &lt;
-            </div>
-            <div id="list7Right">
-                &gt;
-            </div>
-        </div>
-        <div id="food_r">
-
-        </div>
-    </div>
-    <!--钟表-->        <!--钟表-->
-    <div id="clock" class="1">
-        <div id="clockTop">
-            <span style="float: left;">钟表首饰</span>
-            <span style="float: right;border: 0;font-size: 12px;cursor: pointer;">更多商品&gt;</span>
-        </div>
-        <div id="clock_l">
-            <img src="{% static 'img/cate_80.jpg' %}"/>
-            <div id="clock_l_d">
-                <ul>
-                    <li><a href="#">婴幼儿奶粉</a></li>
-                    <li><a href="#">成人奶粉</a></li>
-                    <li><a href="#">喂养洗护用品</a></li>
-                    <li><a href="#">尿裤湿巾</a></li>
-                    <li><a href="#">婴童服饰</a></li>
-                    <li><a href="#">玩具乐器</a></li>
-                    <li><a href="#">婴幼儿辅食</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="clock_m">
-            <ul id="list8">
-
-            </ul>
-            <ul id="list88">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div id="list8Left">
-                &lt;
-            </div>
-            <div id="list8Right">
-                &gt;
-            </div>
-        </div>
-        <div id="clock_r">
-
-        </div>
-    </div>
-    <!--健康-->    <!--健康-->    <!--健康-->
-    <div id="health" class="1">
-        <div id="healthTop">
-            <span style="float: left;">营养保健</span>
-            <span style="float: right;border: 0;font-size: 12px;cursor: pointer;">更多商品&gt;</span>
-        </div>
-        <div id="health_l">
-            <img src="{% static 'img/cate_20.jpg' %}"/>
-            <div id="health_l_d">
-                <ul>
-                    <li><a href="#">婴幼儿奶粉</a></li>
-                    <li><a href="#">成人奶粉</a></li>
-                    <li><a href="#">喂养洗护用品</a></li>
-                    <li><a href="#">尿裤湿巾</a></li>
-                    <li><a href="#">婴童服饰</a></li>
-                    <li><a href="#">玩具乐器</a></li>
-                    <li><a href="#">婴幼儿辅食</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="health_m">
-            <ul id="list9">
-
-            </ul>
-            <ul id="list99">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div id="list9Left">
-                &lt;
-            </div>
-            <div id="list9Right">
-                &gt;
-            </div>
-        </div>
-        <div id="health_r">
-
-        </div>
-    </div>
-    <!--家居-->        <!--家居-->
-    <div id="material" class="1">
-        <div id="materialTop">
-            <span style="float: left;">家居日用</span>
-            <span style="float: right;border: 0;font-size: 12px;cursor: pointer;">更多商品&gt;</span>
-        </div>
-        <div id="material_l">
-            <img src="{% static 'img/cate_35.jpg' %}"/>
-            <div id="material_l_d">
-                <ul>
-                    <li><a href="#">婴幼儿奶粉</a></li>
-                    <li><a href="#">成人奶粉</a></li>
-                    <li><a href="#">喂养洗护用品</a></li>
-                    <li><a href="#">尿裤湿巾</a></li>
-                    <li><a href="#">婴童服饰</a></li>
-                    <li><a href="#">玩具乐器</a></li>
-                    <li><a href="#">婴幼儿辅食</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="material_m">
-            <ul id="list11">
-
-            </ul>
-            <ul id="list111">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div id="list11Left">
-                &lt;
-            </div>
-            <div id="list11Right">
-                &gt;
-            </div>
-        </div>
-        <div id="material_r">
-
-        </div>
-    </div>
-    <!--数码-->    <!--数码--><!--数码-->    <!--数码-->
-    <div id="digital" class="1">
-        <div id="digitalTop">
-            <span style="float: left;">数码电子</span>
-            <span style="float: right;border: 0;font-size: 12px;cursor: pointer;">更多商品&gt;</span>
-        </div>
-        <div id="digital_l">
-            <img src="{% static 'img/cate_92.jpg' %}"/>
-            <div id="digital_l_d">
-                <ul>
-                    <li><a href="#">婴幼儿奶粉</a></li>
-                    <li><a href="#">成人奶粉</a></li>
-                    <li><a href="#">喂养洗护用品</a></li>
-                    <li><a href="#">尿裤湿巾</a></li>
-                    <li><a href="#">婴童服饰</a></li>
-                    <li><a href="#">玩具乐器</a></li>
-                    <li><a href="#">婴幼儿辅食</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="digital_m">
-            <ul id="list12">
-            </ul>
-            <ul id="list1212">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div id="list12Left">
-                &lt;
-            </div>
-            <div id="list12Right">
-                &gt;
-            </div>
-        </div>
-        <div id="digital_r">
-
-        </div>
-    </div>
 </div>
 <!--楼梯--><!--楼梯--><!--楼梯-->
 <div id="stairs">

@@ -6,6 +6,7 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="{% static 'css/public.css' %}"/>
 		<link rel="stylesheet" type="text/css" href="{% static 'css/detailed.css' %}"/>
+
 		<script src="{% static 'js/jquery-1.12.0.js' %}"></script>
 		<script type="text/javascript" src="{% static 'js/public.js' %}" ></script>
 		<script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}" ></script>
@@ -64,16 +65,13 @@
 			<div id="headerTwo">
 				<div id="headerTwo_c">
 					<img src="{% static 'img/logo.png' %}"   id="homepage"/>
-				    <input type="text"id="search_k" placeholder="请输入关键词搜索商品" />
-				    <input type="button" id="search_b"/>
-				    <div id="shoppingCart">
-				    	<span style="position: relative;left: 15px;"></span>
-				    	<br />
-				    	<div id="shoppingCart_c">
-				    		<img src="{% static 'img/gwc.png' %}"/><span>购物车</span><img src="{% static 'img/indexred.png' %}"/>
-				    	</div>				    	
+                    {% if name %}
+                        <a href="{% url 'tpsapp:cart' %}"><div id="shoppingCart"><img src="{% static 'img/gwc.png' %}"/><span>购物车 &nbsp;&nbsp;<i style="color: black">{{ carts.count }}</i></span></div></a>
+                    {% else %}
+                        <div id="shoppingCart"><img src="{% static 'img/gwc.png' %}"/><span>登入后操作</span></div>
+
+                    {% endif %}
 				    </div>
-				</div>
 			</div>
 			
 			<div id="headerNav">
@@ -137,7 +135,7 @@
 					</div>
 					<div id="boxBotton_r">
 						<input type="button" id="goumai" value="立即购买" />
-						<a href="{% url 'tpsapp:cart' %}"><input type="button" id="gwc" value="加入购物车" detailid={{ detail.id }}/></a>
+						<input type="button" id="gwc" value="加入购物车" detailid="{{ detail.id }}"/>
 
 					</div>
 				</div>				

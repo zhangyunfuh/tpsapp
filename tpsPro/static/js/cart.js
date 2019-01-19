@@ -15,13 +15,24 @@ $(function(){
     })
 
     $('#gwc').click(function(){
-        var num1=$('.numb').val();
-        var detailid=$('#gwc').detailid;
-        $.get('/addcart/',{'numb':num1,'detailid':detailid},function(response){
-        console.log('123')
-    })
+
+        // var num1= parseInt($('.numb').val());
+        // var detailid=$('#gwc').detailid;
+
+        $.get('/addcart/',{'numb':$('.numb').val(),'detailid':$('#gwc').attr('detailid')},function(response){
+            console.log('123')
+
+            if(response.status==0){
+				window.open('/login/',target='_self')
+			}else{
+        		$('.numb').val(response.number);
+
+			}
+
+    	})
 
     })
+
 
 
 
