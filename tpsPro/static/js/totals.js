@@ -18,6 +18,21 @@ $(function(){
     $('.span7>i').html(totals);
     $('.nun').text(nums);
 
+    $('.ck').click(function(){
+        var ident=$(this).attr('ident');
+        data={
+            'ident':ident,
+            'total':totals
+        }
+        console.log(ident)
+        $.get('/pay/',data,function(response){
+            if (response.status==1){
+                window.open(response.alipayurl,target='_self')
+            }
+
+        })
+    })
+
 
 
 

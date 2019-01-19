@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.http import JsonResponse
 
 # Create your views here.
+from tpsapp.alipay import alipay
 from tpsapp.models import User, wheel, Detail, Cart
 
 from django.http import HttpResponse,HttpRequest
@@ -94,9 +95,8 @@ def cart(request):
     else:
         name = None
     carts=Cart.objects.all()
-
-
-    return render(request,'cart.html',{'name':name,'carts':carts})
+    idten=random.randrange(10000,10000000)
+    return render(request,'cart.html',{'name':name,'carts':carts,'idtens':idten})
 
 
 def checkuser(request):
@@ -145,3 +145,26 @@ def addcart(request):
     else:
 
         return JsonResponse({'msg':'登入后购买','status':0})
+
+
+def appnotify(request):
+    return JsonResponse({'msg':'success'})
+
+
+def returnview(request):
+    return redirect('tpsapp:homepage')
+
+
+def pay(request):
+    ident=request.GET.get('ident')
+    totals=request.GET.get('total')
+    alipayurl=alipay.direct_pay(
+        subject='book-2018',
+        out_trade_no=ident,
+        total_amount=totals,
+        return_url='http://47.106.251.205/returnview/'
+
+    )
+    alipayurl='https://openapi.alipaydev.com/gateway.do?{data}'.format(data=alipayurl)
+    return  JsonResponse({'alipayurl':alipayurl,'status':1})
+  

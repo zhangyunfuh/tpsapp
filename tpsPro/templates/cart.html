@@ -7,10 +7,11 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/public.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/cart.css' %}"/>
     <script src="{% static 'js/jquery-1.12.0.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/public.js' %}"></script>
+{#    <script type="text/javascript" src="{% static 'js/public.js' %}"></script>#}
     <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
-     <script type="text/javascript" src="{% static 'js/totals.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/totals.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jiesuan.js' %}"></script>
 
 </head>
 <body>
@@ -107,7 +108,7 @@
                 <div id="sureBox">
                     <span class="span6">共<i class="nun" style="color: red;"> {{ carts.count }} </i>件商品 总价（不包含运费）</span><br/>
                     <span class="span7">￥<i></i></span><br/>
-                    <input type="button" id="ck" value="立即结算"/>
+                    <input type="button" class="ck" ident="{{ idtens }}" value="立即结算"/>
                 </div>
             </td>
         </tr>
