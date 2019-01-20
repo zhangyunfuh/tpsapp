@@ -14,5 +14,6 @@ urlpatterns=[
     url(r'^appnotify/$',views.appnotify,name='appnotify'),
     url(r'^returnview/$',views.returnview,name='returnview'),
     url(r'^pay/$',views.pay,name='pay'),
+    url(r'^delete/(\d+)/$',views.delete,name='delete'),
 
 ]

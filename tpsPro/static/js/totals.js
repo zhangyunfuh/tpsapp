@@ -10,7 +10,6 @@ $(function(){
 
         $('.total').eq(m).text(sum);
         totals+=sum;
-        console.log(totals);
 
         var num=parseInt($('.numm').eq(m).text());
         nums+=num;
@@ -24,7 +23,6 @@ $(function(){
             'ident':ident,
             'total':totals
         }
-        console.log(ident)
         $.get('/pay/',data,function(response){
             if (response.status==1){
                 window.open(response.alipayurl,target='_self')

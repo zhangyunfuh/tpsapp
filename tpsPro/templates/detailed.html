@@ -8,7 +8,6 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'css/detailed.css' %}"/>
 
 		<script src="{% static 'js/jquery-1.12.0.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/public.js' %}" ></script>
 		<script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}" ></script>
 		<script type="text/javascript" src="{% static 'js/detailed.js' %}" ></script>
         <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
@@ -66,7 +65,7 @@
 				<div id="headerTwo_c">
 					<img src="{% static 'img/logo.png' %}"   id="homepage"/>
                     {% if name %}
-                        <a href="{% url 'tpsapp:cart' %}"><div id="shoppingCart"><img src="{% static 'img/gwc.png' %}"/><span>购物车 &nbsp;&nbsp;<i style="color: black">{{ carts.count }}</i></span></div></a>
+                        <a href="{% url 'tpsapp:cart' %}"><div id="shoppingCart"><img src="{% static 'img/gwc.png' %}"/><span>购物车 &nbsp;&nbsp;<i style="color: black" id="zl">{{ carts.count }}</i></span></div></a>
                     {% else %}
                         <div id="shoppingCart"><img src="{% static 'img/gwc.png' %}"/><span>登入后操作</span></div>
 
@@ -120,10 +119,10 @@
 				    <span style="font-size: 12px;color: #888888;">价格：</span><span class="price">￥<i style="font-style: normal;">{{ detail.price }}</i></span>
 				    <span style="font-size: 12px;position: relative;top: 100px;right: 100px; color: #888888;">数量:</span>
                     <div class="shuliang">
-                        <span id="sub" style="color: blue;height: 25px;line-height: 25px">-</span>
+                        <span id="sub" style="color: blue;height: 27px;line-height: 25px">-</span>
 
-                        <input class="numb" type="text" value="0" style="text-align: center;height: 25px">
-                        <span id="add" style="color: red;height: 25px;line-height: 25px">+</span>
+                        <input class="numb" type="text" value="1" style="text-align: center;height: 25px">
+                        <span id="add" style="color: red;height: 27px;line-height: 25px;">+</span>
 
                     </div>
 
@@ -134,8 +133,8 @@
 						<img src="{% static 'img/33.jpg' %}" id="ssmallPic2"/>
 					</div>
 					<div id="boxBotton_r">
-						<input type="button" id="goumai" value="立即购买" />
-						<input type="button" id="gwc" value="加入购物车" detailid="{{ detail.id }}"/>
+						<a href="{% url 'tpsapp:cart' %}"><input type="button" id="goumai" value="立即购买" /></a>
+						<input type="button" id="gwc" value="加入购物车" detailid="{{ detail.id }}"/><i id="wenzi" style="color: royalblue;"></i>
 
 					</div>
 				</div>				

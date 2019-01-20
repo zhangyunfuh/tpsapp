@@ -85,6 +85,13 @@ def detailed(request,proid):
     return render(request, 'detailed.html', {'name': name,'detail':detail,'carts':carts})
 
 
+def delete(request,proid):
+    token = request.session.get('token')
+    users = User.objects.filter(token=token)
+    cart=Cart.objects.get(products_id=int(proid))
+    cart.delete()
+    return redirect('tpsapp:cart')
+
 
 def cart(request):
     token = request.session.get('token')
@@ -120,13 +127,14 @@ def checkuser(request):
 
 def addcart(request):
     token=request.session.get('token')
-
     print(token)
     if token:
+
         users=User.objects.get(token=token)
         detailid=request.GET.get('detailid')
         details=Detail.objects.get(id=detailid)
         carts=Cart.objects.filter(user=users).filter(products=details)
+        print(carts)
         if carts.exists():
             cart=carts.first()
             cart.number=request.GET.get('numb')
@@ -140,8 +148,9 @@ def addcart(request):
             carts.number=request.GET.get('numb')
             carts.isselect=True
             carts.save()
-            msg={'msg':'{}-添加购物车成功'.format(details.title),'number':carts.number,'status':1}
+            msg={'msg':'{}-添加购物车成功'.format(details.title),'number':carts.number,'status':1,'cishu':0}
             return JsonResponse(msg)
+
     else:
 
         return JsonResponse({'msg':'登入后购买','status':0})
@@ -167,4 +176,5 @@ def pay(request):
     )
     alipayurl='https://openapi.alipaydev.com/gateway.do?{data}'.format(data=alipayurl)
     return  JsonResponse({'alipayurl':alipayurl,'status':1})
-  
+
+
