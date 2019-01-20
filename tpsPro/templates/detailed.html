@@ -133,7 +133,13 @@
 						<img src="{% static 'img/33.jpg' %}" id="ssmallPic2"/>
 					</div>
 					<div id="boxBotton_r">
-						<a href="{% url 'tpsapp:cart' %}"><input type="button" id="goumai" value="立即购买" /></a>
+                        {% if name %}
+                            <a href="{% url 'tpsapp:cart' %}"><input type="button" id="goumai" value="立即购买" /></a>
+                        {% else %}
+                            <a href="{% url 'tpsapp:login' %}"><input type="button" id="goumai" value="立即购买" /></a>
+
+                        {% endif %}
+
 						<input type="button" id="gwc" value="加入购物车" detailid="{{ detail.id }}"/><i id="wenzi" style="color: royalblue;"></i>
 
 					</div>
