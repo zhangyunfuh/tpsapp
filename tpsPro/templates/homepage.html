@@ -82,7 +82,6 @@
             <img src="{% static 'img/logo.png' %}" id="homepage"/>
             {% if name %}
                 <div id="shoppingCart">
-
                     <a href="{% url 'tpsapp:cart' %}"><img src="{% static 'img/gwc.png' %}"/><span>购物车 &nbsp;&nbsp;<i
                             style="color: black">{{ carts.count }}</i></span>
                     </a>

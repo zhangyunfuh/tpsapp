@@ -96,13 +96,17 @@
             <th width="130px">操作</th>
         </tr>
         {% for cart in carts %}
-            <tr height="38px" class="goods">
+            {% if name == cart.user.name %}
+                <tr height="38px" class="goods">
                 <td width="450px">{{ cart.products.title }}</td>
                 <td width="130px" class="prices" style="text-align: center">{{ cart.products.price }}</td>
                 <td width="130px" class="numm" style="text-align: center">{{ cart.number }}</td>
                 <td width="130px" class="total" style="text-align: center;"></td>
                 <td width="130px" class="del" style="text-align: center"><a href="{% url 'tpsapp:delete' cart.products.id %}" style="color: red">删除商品</a></td>
             </tr>
+
+            {% endif %}
+
         {% endfor %}
 
         <tr >

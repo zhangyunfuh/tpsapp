@@ -1,5 +1,6 @@
 from django.conf.urls import url
 from tpsapp import views
+from tpsapp import yanzhengma
 
 urlpatterns=[
     url(r'^$',views.homepage,name='homepage'),
@@ -15,5 +16,7 @@ urlpatterns=[
     url(r'^returnview/$',views.returnview,name='returnview'),
     url(r'^pay/$',views.pay,name='pay'),
     url(r'^delete/(\d+)/$',views.delete,name='delete'),
+    # url(r'^get_verify_img/$',views.get_verify_img,name='get_verify_img')
+    url(r'^yanzhengma/$', yanzhengma.get_valid_img, name='yanzhengma'),
 
 ]
