@@ -3,7 +3,7 @@ beautifulsoup4==4.7.1
 bs4==0.0.1
 certifi==2018.11.29
 chardet==3.0.4
-Django==1.11
+Django==1.11.29
 django-redis-sessions==0.6.1
 dukpy==0.2.2
 echarts-python==0.1.3
